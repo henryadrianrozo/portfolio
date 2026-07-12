@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    @keyframes rainbowShift { 0% { background-position: 0% 0%; } 100% { background-position: -200% 0%; } }
+    html, body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+  </style>
+</helmet>
+
+<div style="background: oklch(99% 0.007 75); min-height: 100vh; color: oklch(13% 0 0); position: relative; box-sizing: border-box; padding: clamp(20px, 3.5vw, 44px);">
+
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 2px; z-index: 9999; background: linear-gradient(90deg, #ff3b30, #ff9500, #ffcc00, #34c759, #0a84ff, #5e5ce6, #af52de, #ff3b30); background-size: 200% 100%; animation: rainbowShift 7s linear infinite;"></div>
+
+  <nav style="display: flex; justify-content: space-between; align-items: flex-start;" data-screen-label="XUsCurrency — Nav">
+    <a href="Portfolio.dc.html" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); white-space: nowrap;" style-hover="opacity: 0.55;">Henry &ldquo;Adrian&rdquo; Rozo</a>
+    <div style="display: flex; align-items: center; gap: 20px; padding-top: 0.3em;">
+      <a href="https://www.linkedin.com/in/henryadrianrozo/" target="_blank" rel="noopener" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;" style-hover="opacity: 0.55;">LinkedIn &#8599;</a>
+      <a href="mailto:henryadrianrozo@gmail.com" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;" style-hover="opacity: 0.55;">Email &#8599;</a>
+    </div>
+  </nav>
+
+  <div style="margin-top: clamp(20px, 3vw, 36px); display: grid; grid-template-columns: 1fr 1fr;" data-screen-label="XUsCurrency — Quadrants">
+
+    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/xuscurrency-icon.png" alt="XUsCurrency icon" style="width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0; object-fit: cover;">
+        <h1 style="font-family: 'Poppins', 'Helvetica Neue', sans-serif; font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: 0; letter-spacing: -0.01em;"><span style="font-weight:800; background:linear-gradient(160deg,#C4AFFF 10%,#9B7DFF 55%,#7C5CFF 100%); -webkit-background-clip:text; background-clip:text; color:transparent;">X</span><span style="font-weight:300; color:#26232F;">Us</span><span style="font-weight:800; background:linear-gradient(160deg,#C4AFFF 10%,#9B7DFF 55%,#7C5CFF 100%); -webkit-background-clip:text; background-clip:text; color:transparent;">Currency</span></h1>
+      </div>
+      <p style="font-weight: 600; font-size: 0.85rem; margin: 10px 0 0;">Simple, clean, and free conversions for UsAll.</p>
+      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
+        <div style="display: inline-block; padding: 5px 11px; border: 1px solid oklch(70% 0.01 75); border-radius: 999px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: oklch(40% 0.01 75);">Closed Testing</div>
+        <span style="display: inline-block; padding: 7px 13px; border: 1px solid oklch(80% 0.01 75); color: oklch(55% 0.01 75); font-weight: 600; font-size: 0.72rem; border-radius: 4px;">Play Store &mdash; Coming Soon</span>
+      </div>
+    </div>
+
+    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
+      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">The Problem</div>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Android users often have to choose between searching the web for every conversion or installing currency apps burdened by advertising, visual clutter, and unnecessary complexity. XUsCurrency is a cleaner alternative focused on fast access and thoughtful design.</p>
+    </div>
+
+    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
+      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Screenshots</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px;">
+        <sc-for list="{{ shotsQuad }}" as="shot" hint-placeholder-count="4">
+          <div style="aspect-ratio: 9 / 16; max-height: 160px; border-radius: 8px; background-image: repeating-linear-gradient(135deg, {{ shot.stripeA }} 0px, {{ shot.stripeA }} 2px, {{ shot.stripeB }} 2px, {{ shot.stripeB }} 12px); border: 1px solid oklch(88% 0.01 75); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: monospace; font-size: 0.62rem; color: {{ shot.labelColor }}; background: {{ shot.bg }}; padding: 3px 7px; border-radius: 3px;">{{ shot.label }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+      <div style="text-align: left; max-width: 420px;">
+        <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Description</div>
+        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">A lightweight Android currency converter and tracker built for travelers, cross-border money decisions, and everyday currency curiosity.</p>
+        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">It&rsquo;s designed for travelers, people sending or receiving money across borders, and anyone casually interested in following currencies over time &mdash; intended for everyday guidance rather than professional trading or investment decisions.</p>
+      </div>
+    </div>
+
+    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
+      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Core Features</div>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Fast conversion between supported currencies using daily updated exchange rates, historical tracking to monitor how currencies change over time, and optional rate alerts when a currency moves beyond a threshold you set. XUsCurrency can also be launched instantly from Android&rsquo;s Quick Settings panel from any screen, and is designed to feel polished and comfortable in both light and dark mode.</p>
+    </div>
+
+    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
+      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Data Source &amp; Philosophy</div>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Exchange rates are provided through the free and open-source fawazahmed0/currency-api project and update daily, intended for practical everyday estimates rather than professional financial decisions.</p>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Quality software shouldn&rsquo;t require intrusive advertising or aggressive monetization &mdash; XUsCurrency emphasizes clarity, speed, and restraint, with a near-zero learning curve, while remaining completely free to use.</p>
+    </div>
+
+    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
+      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Built with AI</div>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency was independently conceived and developed through an AI-first workflow using Android Studio, Claude Code, Claude, and ChatGPT. Entering the project with no prior coding experience, AI served as both an implementation partner and learning tool throughout research, design, debugging, and testing &mdash; demonstrating how modern AI tools can lower technical barriers while still requiring ownership, judgment, and product thinking.</p>
+    </div>
+
+    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
+      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Privacy &amp; Business Model</div>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency is donation-supported and free from intrusive advertisements or paywalls. The app does not sell user information and aims to minimize data collection wherever possible.</p>
+      <a href="Privacy Policy.dc.html" style="display: inline-block; margin-top: 10px; font-weight: 600; font-size: 0.85rem; border-bottom: 1px solid oklch(13% 0 0);" style-hover="opacity: 0.55;">Privacy Policy &#8599;</a>
+    </div>
+
+  </div>
+
+  <div style="padding-bottom: clamp(28px, 4vw, 48px);"></div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      shotsQuad: [
+        { label: 'Converter — Light', bg: 'oklch(98% 0.014 75)', labelColor: 'oklch(30% 0.01 75)', stripeA: 'oklch(96% 0.01 75)', stripeB: 'oklch(91% 0.01 75)' },
+        { label: 'Converter — Dark', bg: 'oklch(20% 0 0)', labelColor: 'oklch(90% 0.01 75)', stripeA: 'oklch(22% 0 0)', stripeB: 'oklch(16% 0 0)' },
+        { label: 'Tracker', bg: 'oklch(98% 0.014 75)', labelColor: 'oklch(30% 0.01 75)', stripeA: 'oklch(96% 0.01 75)', stripeB: 'oklch(91% 0.01 75)' },
+        { label: 'Settings', bg: 'oklch(98% 0.014 75)', labelColor: 'oklch(30% 0.01 75)', stripeA: 'oklch(96% 0.01 75)', stripeB: 'oklch(91% 0.01 75)' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

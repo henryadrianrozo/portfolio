@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @keyframes rainbowShift { 0% { background-position: 0% 0%; } 100% { background-position: -200% 0%; } }
+    body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+  </style>
+</helmet>
+
+<div style="background: oklch(99% 0.007 75); min-height: 100vh; color: oklch(13% 0 0); position: relative;">
+
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 2px; z-index: 9999; background: linear-gradient(90deg, #ff3b30, #ff9500, #ffcc00, #34c759, #0a84ff, #5e5ce6, #af52de, #ff3b30); background-size: 200% 100%; animation: rainbowShift 7s linear infinite;"></div>
+
+  <div style="box-sizing: border-box; padding: clamp(20px, 3.5vw, 44px);">
+    <nav style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <a href="Portfolio.dc.html" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); white-space: nowrap;" style-hover="opacity: 0.55;">Henry &ldquo;Adrian&rdquo; Rozo</a>
+      <div style="display: flex; align-items: center; gap: 20px; padding-top: 0.3em;">
+        <a href="https://www.linkedin.com/in/henryadrianrozo/" target="_blank" rel="noopener" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;" style-hover="opacity: 0.55;">LinkedIn &#8599;</a>
+        <a href="mailto:henryadrianrozo@gmail.com" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;" style-hover="opacity: 0.55;">Email &#8599;</a>
+      </div>
+    </nav>
+  </div>
+
+  <div style="max-width: 680px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 32px) clamp(100px, 12vw, 160px);" data-screen-label="Privacy Policy">
+    <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">XUsCurrency</div>
+    <h1 style="font-weight: 900; font-size: clamp(2rem, 5vw, 2.75rem); margin: 12px 0 0; letter-spacing: -0.01em;">Privacy Policy</h1>
+    <p style="font-size: 0.95rem; color: oklch(50% 0.01 75); margin: 12px 0 0;">Last updated: July 2026</p>
+    <p style="font-size: 1.02rem; color: oklch(30% 0.01 75); line-height: 1.7; margin: 24px 0 0;">XUsCurrency is designed to be simple, private, and transparent. This app does not require an account, does not contain advertising, and does not use behavioral tracking.</p>
+
+    <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="12">
+      <section style="margin-top: 40px;">
+        <h2 style="font-weight: 700; font-size: 1.2rem; margin: 0 0 10px; letter-spacing: -0.005em;">{{ sec.heading }}</h2>
+        <sc-if value="{{ sec.intro }}">
+          <p style="font-size: 1.02rem; color: oklch(30% 0.01 75); line-height: 1.7; margin: 0 0 12px;">{{ sec.intro }}</p>
+        </sc-if>
+        <sc-if value="{{ sec.paragraphs }}">
+          <sc-for list="{{ sec.paragraphs }}" as="p" hint-placeholder-count="2">
+            <p style="font-size: 1.02rem; color: oklch(30% 0.01 75); line-height: 1.7; margin: 0 0 12px;">{{ p.text }}</p>
+          </sc-for>
+        </sc-if>
+        <sc-if value="{{ sec.list }}">
+          <ul style="margin: 0 0 12px; padding-left: 20px;">
+            <sc-for list="{{ sec.list }}" as="item" hint-placeholder-count="5">
+              <li style="font-size: 1.02rem; color: oklch(30% 0.01 75); line-height: 1.7; margin-bottom: 4px;">{{ item.text }}</li>
+            </sc-for>
+          </ul>
+        </sc-if>
+        <sc-if value="{{ sec.outro }}">
+          <p style="font-size: 1.02rem; color: oklch(30% 0.01 75); line-height: 1.7; margin: 0;">{{ sec.outro }}</p>
+        </sc-if>
+        <sc-if value="{{ sec.contact }}">
+          <p style="font-size: 1.02rem; color: oklch(13% 0 0); line-height: 1.7; margin: 0; font-weight: 600;">{{ sec.contact.org }}</p>
+          <a href="mailto:{{ sec.contact.email }}" style="display: inline-block; font-size: 1.02rem; border-bottom: 1px solid oklch(13% 0 0);" style-hover="opacity: 0.6;">{{ sec.contact.email }}</a>
+        </sc-if>
+      </section>
+    </sc-for>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      sections: [
+        {
+          heading: 'Information We Collect',
+          intro: 'XUsCurrency does not collect personal information such as:',
+          list: [
+            { text: 'Name' },
+            { text: 'Email address' },
+            { text: 'Phone number' },
+            { text: 'Physical address' },
+            { text: 'Precise location' },
+            { text: 'Contacts' },
+            { text: 'Device identifiers' },
+            { text: 'Advertising identifiers' }
+          ],
+          outro: 'The app does not create user accounts and does not maintain user profiles.'
+        },
+        {
+          heading: 'Information Stored on Your Device',
+          intro: 'To provide app functionality, XUsCurrency stores certain information locally on your device, including:',
+          list: [
+            { text: 'Tracked currency pairs and alert settings' },
+            { text: 'Tracking history and alert activity' },
+            { text: 'Recently used currencies' },
+            { text: 'Exchange-rate cache data' },
+            { text: 'Historical-rate cache data' },
+            { text: 'App preferences and settings' },
+            { text: 'Converter state and last-selected currencies' }
+          ],
+          outro: 'This information remains on your device and is not transmitted to XUsCurrency or any company-controlled server.'
+        },
+        {
+          heading: 'Exchange Rate Data',
+          paragraphs: [
+            { text: 'XUsCurrency retrieves exchange-rate information from the free and open-source fawazahmed0/currency-api project.' },
+            { text: 'Requests are made to publicly available endpoints and do not include personal information, account identifiers, or user-generated content.' },
+            { text: 'Like any internet request, your device\u2019s IP address may be visible to the network providers involved in delivering the data, but XUsCurrency does not collect, store, or process that information.' }
+          ]
+        },
+        {
+          heading: 'Notifications',
+          paragraphs: [
+            { text: 'XUsCurrency can generate local notifications for currency alerts that you configure.' },
+            { text: 'Notifications are generated entirely on your device using Android\u2019s background scheduling system. They are not push notifications and do not require a server.' }
+          ]
+        },
+        {
+          heading: 'Analytics and Tracking',
+          intro: 'XUsCurrency does not use:',
+          list: [
+            { text: 'Analytics SDKs' },
+            { text: 'Advertising SDKs' },
+            { text: 'Behavioral tracking' },
+            { text: 'Cross-app tracking' },
+            { text: 'Tracking pixels' },
+            { text: 'Crash-reporting services' }
+          ],
+          outro: 'No information about your usage is sent to analytics or marketing providers.'
+        },
+        {
+          heading: 'Advertising',
+          paragraphs: [{ text: 'XUsCurrency does not display advertisements.' }]
+        },
+        {
+          heading: 'Third-Party Services',
+          intro: 'The app relies on the following third-party technologies to function:',
+          list: [
+            { text: 'fawazahmed0/currency-api (exchange-rate data)' },
+            { text: 'Retrofit' },
+            { text: 'Gson' },
+            { text: 'Jetpack DataStore' },
+            { text: 'Android WorkManager' },
+            { text: 'Navigation Compose' }
+          ],
+          outro: 'These technologies are used solely to provide app functionality.'
+        },
+        {
+          heading: 'Donations',
+          paragraphs: [
+            { text: 'XUsCurrency includes an optional link to Ko-fi for users who wish to support development.' },
+            { text: 'Any interaction with Ko-fi occurs directly between you and Ko-fi. XUsCurrency does not process payments, receive payment information, or receive personal information from Ko-fi.' }
+          ]
+        },
+        {
+          heading: 'Data Sharing and Sale',
+          paragraphs: [
+            { text: 'XUsCurrency does not sell personal information.' },
+            { text: 'XUsCurrency does not share personal information with advertisers, data brokers, or marketing companies.' }
+          ]
+        },
+        {
+          heading: 'Data Retention',
+          intro: 'All app data is stored locally on your device. Data remains available until:',
+          list: [
+            { text: 'You delete it within the app' },
+            { text: 'You clear the app\u2019s storage' },
+            { text: 'You uninstall the app' }
+          ],
+          outro: 'Some historical tracking records may remain locally on the device after a tracked pair is removed so users can review prior activity.'
+        },
+        {
+          heading: 'Children\u2019s Privacy',
+          paragraphs: [{ text: 'XUsCurrency is not directed toward children under 13 and does not knowingly collect personal information from children.' }]
+        },
+        {
+          heading: 'Changes to This Policy',
+          paragraphs: [{ text: 'This Privacy Policy may be updated from time to time to reflect app improvements, legal requirements, or operational changes. Updates will be posted on this page with a revised effective date.' }]
+        },
+        {
+          heading: 'Contact',
+          intro: 'For questions regarding this Privacy Policy, please contact:',
+          contact: { org: 'XUsAll', email: 'xusalldevelopment@gmail.com' }
+        }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
