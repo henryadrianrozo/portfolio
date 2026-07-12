@@ -26,7 +26,7 @@
 
   <div style="margin-top: clamp(20px, 3vw, 36px); display: grid; grid-template-columns: 1fr 1fr;">
 
-    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
+    <div style="grid-column: 1; grid-row: 1; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
       <div style="display: flex; align-items: center; gap: 12px;">
         <img src="/assets/xuscurrency-icon.png" alt="XUsCurrency icon" style="width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0; object-fit: cover;">
         <h1 style="font-family: 'Poppins', 'Helvetica Neue', sans-serif; font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: 0; letter-spacing: -0.01em;"><span style="font-weight:800; background:linear-gradient(160deg,#C4AFFF 10%,#9B7DFF 55%,#7C5CFF 100%); -webkit-background-clip:text; background-clip:text; color:transparent;">X</span><span style="font-weight:300; color:#26232F;">Us</span><span style="font-weight:800; background:linear-gradient(160deg,#C4AFFF 10%,#9B7DFF 55%,#7C5CFF 100%); -webkit-background-clip:text; background-clip:text; color:transparent;">Currency</span></h1>
@@ -38,12 +38,12 @@
       </div>
     </div>
 
-    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
+    <div style="grid-column: 2; grid-row: 1; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
       <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">The Problem</div>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Android users often have to choose between searching the web for every conversion or installing currency apps burdened by advertising, visual clutter, and unnecessary complexity. XUsCurrency is a cleaner alternative focused on fast access and thoughtful design.</p>
     </div>
 
-    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
+    <div style="grid-column: 1; grid-row: 2; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
       <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Screenshots</div>
       <div class="shots-grid" style="margin-top: 12px;">
         <button type="button" class="shot" data-full="/assets/screenshots/converter-light-full.jpg" aria-label="View full-resolution screenshot: Converter — Light">
@@ -65,31 +65,30 @@
       </div>
     </div>
 
-    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
-      <div style="text-align: left; max-width: 420px;">
+    <div style="grid-column: 2; grid-row: 2; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px); height: 100%; box-sizing: border-box; display: grid; grid-template-rows: 1fr 1fr;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
         <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Description</div>
         <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">A lightweight Android currency converter and tracker built for travelers, cross-border money decisions, and everyday currency curiosity.</p>
         <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">It&rsquo;s designed for travelers, people sending or receiving money across borders, and anyone casually interested in following currencies over time &mdash; intended for everyday guidance rather than professional trading or investment decisions.</p>
       </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
+        <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Core Features</div>
+        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Fast conversion between supported currencies using daily updated exchange rates, historical tracking to monitor how currencies change over time, and optional rate alerts when a currency moves beyond a threshold you set. XUsCurrency can also be launched instantly from Android&rsquo;s Quick Settings panel from any screen, and is designed to feel polished and comfortable in both light and dark mode.</p>
+      </div>
     </div>
 
-    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
-      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Core Features</div>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Fast conversion between supported currencies using daily updated exchange rates, historical tracking to monitor how currencies change over time, and optional rate alerts when a currency moves beyond a threshold you set. XUsCurrency can also be launched instantly from Android&rsquo;s Quick Settings panel from any screen, and is designed to feel polished and comfortable in both light and dark mode.</p>
+    <div style="grid-column: 1; grid-row: 3; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
+      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Built with AI</div>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency was independently conceived and developed through an AI-first workflow using Android Studio, Claude Code, Claude, and ChatGPT. Entering the project with no prior coding experience, AI served as both an implementation partner and learning tool throughout research, design, debugging, and testing &mdash; demonstrating how modern AI tools can lower technical barriers while still requiring ownership, judgment, and product thinking.</p>
     </div>
 
-    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
+    <div style="grid-column: 2; grid-row: 3; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
       <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Data Source &amp; Philosophy</div>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Exchange rates are provided through the free and open-source fawazahmed0/currency-api project and update daily, intended for practical everyday estimates rather than professional financial decisions.</p>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Quality software shouldn&rsquo;t require intrusive advertising or aggressive monetization &mdash; XUsCurrency emphasizes clarity, speed, and restraint, with a near-zero learning curve, while remaining completely free to use.</p>
     </div>
 
-    <div style="padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
-      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Built with AI</div>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency was independently conceived and developed through an AI-first workflow using Android Studio, Claude Code, Claude, and ChatGPT. Entering the project with no prior coding experience, AI served as both an implementation partner and learning tool throughout research, design, debugging, and testing &mdash; demonstrating how modern AI tools can lower technical barriers while still requiring ownership, judgment, and product thinking.</p>
-    </div>
-
-    <div style="padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
+    <div style="grid-column: 2; grid-row: 4; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
       <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Privacy &amp; Business Model</div>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency is donation-supported and free from intrusive advertisements or paywalls. The app does not sell user information and aims to minimize data collection wherever possible.</p>
       <a href="/xuscurrency/privacy" class="hover-55" style="display: inline-block; margin-top: 10px; font-weight: 600; font-size: 0.85rem; border-bottom: 1px solid oklch(13% 0 0);">Privacy Policy &#8599;</a>
