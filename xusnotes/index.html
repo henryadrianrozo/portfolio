@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>XUsNotes &mdash; Henry &ldquo;Adrian&rdquo; Rozo</title>
 <meta name="description" content="A fast, private scratchpad that lives in your browser. Opens straight into an empty note. Nothing uploaded, nothing synced, nothing seen.">
+<link rel="canonical" href="https://www.adrianrozo.com/xusnotes">
+<meta name="theme-color" content="#FDFBF7">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.adrianrozo.com/xusnotes">
+<meta property="og:title" content="XUsNotes — Henry “Adrian” Rozo">
+<meta property="og:description" content="A fast, private scratchpad that lives in your browser. Opens straight into an empty note. Nothing uploaded, nothing synced, nothing seen.">
+<meta property="og:image" content="https://www.adrianrozo.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="XUsNotes — Henry “Adrian” Rozo">
+<meta name="twitter:description" content="A fast, private scratchpad that lives in your browser. Opens straight into an empty note. Nothing uploaded, nothing synced, nothing seen.">
+<meta name="twitter:image" content="https://www.adrianrozo.com/og.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -36,13 +49,13 @@
     </div>
 
     <div style="grid-column: 2; grid-row: 1; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
-      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">The Problem</div>
+      <h2 class="case-label">The Problem</h2>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Most note apps ask you to make an account before you can write a single sentence, then sync that sentence to a server you did not ask for.</p>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">But a large share of what people actually type is temporary: a phone number held for thirty seconds, a paragraph being reworded, text pasted somewhere neutral to strip its formatting. That work does not need an account, a sync engine, or a subscription. It needs a blank page that opens instantly.</p>
     </div>
 
     <div style="grid-column: 1; grid-row: 2; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
-      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Screenshots</div>
+      <h2 class="case-label">Screenshots</h2>
       <div class="shots-grid" style="margin-top: 12px;">
         <button type="button" class="shot" data-full="/assets/screenshots/notes-light-full.jpg" aria-label="View full-resolution screenshot: Editor — Light">
           <img class="shot-img" src="/assets/screenshots/notes-light-thumb.jpg" alt="XUsNotes editor in light mode" width="900" height="562" loading="lazy" decoding="async">
@@ -57,24 +70,24 @@
 
     <div style="grid-column: 2; grid-row: 2; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px); height: 100%; box-sizing: border-box; display: grid; grid-template-rows: 1fr 1fr; gap: 28px;">
       <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
-        <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Description</div>
+        <h2 class="case-label">Description</h2>
         <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Opening the app puts you in an empty note with the caret already in it. Earlier notes wait in the sidebar, and a note you leave empty is discarded rather than cluttering the list.</p>
         <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Everything is stored in your own browser. Nothing is uploaded, nothing is synced, and there is no account to make.</p>
       </div>
       <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
-        <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Core Features</div>
+        <h2 class="case-label">Core Features</h2>
         <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Rich text with headings, lists, and checklists. Starring, and sorting by date, name, or starred. Font and text-size choices for the editor. An opt-in auto-delete after thirty days that never touches a starred note. Sanitized paste, rich copy that keeps formatting, export, word count, and full light and dark themes.</p>
       </div>
     </div>
 
     <div style="grid-column: 1; grid-row: 3; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
-      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Built with AI</div>
+      <h2 class="case-label">Built with AI</h2>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Designed in Claude Design and built with Claude Code as a single HTML file with no build step, which is the right shape for something this small.</p>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">The handoff documents the tradeoffs rather than hiding them: the editor uses a deprecated but universally supported browser API because adopting a full editor framework would have been disproportionate, and browser storage caps around five megabytes, which is roughly a million words of plain text.</p>
     </div>
 
     <div style="grid-column: 2; grid-row: 3; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
-      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Approach &amp; Philosophy</div>
+      <h2 class="case-label">Approach &amp; Philosophy</h2>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Tags, folders, sharing, sync, and multi-select were all considered and left out. Each one is individually reasonable and each one turns a scratchpad into an application that needs maintaining, which is the opposite of the point.</p>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Pasted content is sanitized to a deliberate allowlist of tags, with every attribute stripped except safe links, so text pulled in from anywhere on the web cannot bring anything with it.</p>
     </div>

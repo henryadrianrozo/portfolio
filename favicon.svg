@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Henry Adrian Rozo">
-  <!-- A miniature of the site itself: the near-black ink on the warm cream
-       ground, with the rainbow bar that runs across the top of every page.
-       Colors match styles.css; keep them in sync if the palette moves. -->
+  <!-- The rainbow bar that runs across the top of every page, compressed into a
+       dot. A single shape with pure color is the only thing that reliably
+       survives 16px, which is why this and not a monogram.
+
+       Full bleed with transparent corners on purpose: the orb then reads the
+       same against light or dark browser chrome. The stops are the same seven
+       used by .rainbow-bar in styles.css; keep them in sync. -->
   <defs>
-    <clipPath id="r">
-      <rect width="64" height="64" rx="13"/>
-    </clipPath>
-    <linearGradient id="spectrum" x1="0" y1="0" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="orb" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#ff3b30"/>
       <stop offset="17%" stop-color="#ff9500"/>
       <stop offset="33%" stop-color="#ffcc00"/>
@@ -16,15 +17,5 @@
       <stop offset="100%" stop-color="#af52de"/>
     </linearGradient>
   </defs>
-
-  <g clip-path="url(#r)">
-    <rect width="64" height="64" fill="#141414"/>
-    <rect width="64" height="6" fill="url(#spectrum)"/>
-  </g>
-
-  <!-- The A is drawn rather than set in type, so it renders identically
-       wherever the icon is used and does not depend on a font being present. -->
-  <path d="M 18 50 L 32 19 L 46 50 M 24 40 L 40 40"
-        fill="none" stroke="#FDFBF7" stroke-width="6"
-        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="31" fill="url(#orb)"/>
 </svg>

@@ -277,3 +277,128 @@ a { text-decoration: none; color: inherit; }
   background-clip: text;
   color: transparent;
 }
+
+/* ---------- music easter egg ---------- */
+
+.music-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid oklch(80% 0.01 75);
+  border-radius: 999px;
+  background: none;
+  color: oklch(35% 0.01 75);
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.music-toggle svg {
+  /* the triangle reads centered only once it is nudged off true center */
+  margin-left: 2px;
+}
+
+.music-toggle:hover,
+.music-toggle[aria-expanded='true'] {
+  border-color: oklch(35% 0.01 75);
+  color: oklch(13% 0 0);
+}
+
+.music-toggle:focus-visible {
+  outline: 2px solid oklch(13% 0 0);
+  outline-offset: 3px;
+}
+
+/* Absolutely positioned so opening it cannot push the single-screen layout
+   around. Anchored to the nav, which is position: relative for this reason. */
+.music-panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 60;
+  width: min(340px, calc(100vw - 40px));
+  padding: 12px 12px 4px;
+  background: oklch(99% 0.007 75);
+  border: 1px solid oklch(88% 0.01 75);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px oklch(13% 0 0 / 0.1);
+}
+
+.music-panel[hidden] {
+  display: none;
+}
+
+.music-panel iframe {
+  display: block;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Sits over the Spotify iframe, which is dark, so it needs its own light
+   ground. Without one the X disappears into the player artwork. */
+.music-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid oklch(88% 0.01 75);
+  border-radius: 999px;
+  background: oklch(99% 0.007 75);
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: oklch(35% 0.01 75);
+  cursor: pointer;
+}
+
+.music-close:hover {
+  color: oklch(13% 0 0);
+  border-color: oklch(60% 0.01 75);
+}
+
+.music-close:focus-visible {
+  outline: 2px solid oklch(13% 0 0);
+  outline-offset: 2px;
+}
+
+/* Room for the close button so it never sits on top of the artwork. */
+.music-panel {
+  padding-top: 30px;
+}
+
+.music-note {
+  margin: 10px 2px 8px;
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: oklch(45% 0.01 75);
+}
+
+.music-note a {
+  color: oklch(25% 0.01 75);
+  border-bottom: 1px solid oklch(80% 0.01 75);
+}
+
+.music-note a:hover {
+  border-bottom-color: oklch(35% 0.01 75);
+}
+
+/* ---------- case study section labels ---------- */
+/* These are real <h2> elements. They used to be styled divs, which meant each
+   case study page was an h1 with no structure under it: screen readers could
+   not jump between sections and search engines saw no outline. */
+
+.case-label {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: oklch(45% 0.01 75);
+}
