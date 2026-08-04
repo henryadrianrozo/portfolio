@@ -124,3 +124,152 @@ a { text-decoration: none; color: inherit; }
 }
 
 .lightbox-close:hover { opacity: 0.85; }
+
+/* ---------- homepage project list ---------- */
+/* Six projects in the space one used to take, so the page can still be a
+   single screen with no scrolling. Each row is name, one line, and links. */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(8px, 1.1vh, 13px) 0;
+  border-bottom: 1px solid oklch(93% 0.01 75);
+}
+
+.project-row:last-child {
+  border-bottom: 0;
+}
+
+.project-main {
+  min-width: 0;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: clamp(1rem, 1.45vw, 1.28rem);
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.project-desc {
+  font-weight: 400;
+  font-size: clamp(0.74rem, 0.92vw, 0.84rem);
+  color: oklch(45% 0.01 75);
+  margin: 3px 0 0;
+  line-height: 1.4;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.project-view {
+  font-weight: 600;
+  font-size: clamp(0.72rem, 0.88vw, 0.8rem);
+  color: oklch(13% 0 0);
+  border-bottom: 1px solid oklch(13% 0 0);
+  padding-bottom: 1px;
+  transition: opacity 0.18s ease;
+}
+
+.project-view:hover {
+  opacity: 0.55;
+}
+
+.project-live {
+  font-weight: 500;
+  font-size: clamp(0.72rem, 0.88vw, 0.8rem);
+  color: oklch(45% 0.01 75);
+}
+
+/* Not a link: there is nowhere to send anyone yet. */
+.project-status {
+  font-weight: 500;
+  font-size: clamp(0.7rem, 0.85vw, 0.78rem);
+  color: oklch(58% 0.01 75);
+}
+
+/* The single-screen layout is a desktop idea. On a phone, or any short
+   window, locking to 100vh with overflow hidden just clips content, so the
+   page becomes an ordinary scrolling page instead.
+
+   The desktop layout is a two-column grid with explicit row placement. Forcing
+   it to one column is not enough: the explicit rows would drop both columns
+   into the same cell on top of each other. So on small screens it stops being
+   a grid entirely and becomes a flex column, with order restoring the reading
+   sequence the DOM does not have. */
+@media (max-width: 900px), (max-height: 620px) {
+  html,
+  body {
+    height: auto !important;
+    overflow: auto !important;
+  }
+
+  .app-shell {
+    height: auto !important;
+    width: auto !important;
+    min-height: 100vh;
+    overflow: visible !important;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .home-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+
+  .home-grid > * {
+    width: auto !important;
+    text-align: left !important;
+    justify-self: start !important;
+    margin-top: 0 !important;
+  }
+
+  .home-grid > *:nth-child(1) { order: 1; }
+  .home-grid > *:nth-child(3) { order: 2; margin: 12px 0 20px !important; }
+  .home-grid > *:nth-child(5) { order: 3; }
+  .home-grid > *:nth-child(2) { order: 4; margin-top: 40px !important; }
+  .home-grid > *:nth-child(4) { order: 5; margin: 12px 0 20px !important; }
+  .home-grid > *:nth-child(6) { order: 6; }
+
+  .home-grid .col-rule {
+    width: 100% !important;
+  }
+
+  .project-row {
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  .experience-list > div {
+    text-align: left !important;
+  }
+}
+
+/* XUsAll has no single accent color. Its identity is the spectrum itself, the
+   same six stops used on the 1px bar across every XUsAll property, so the
+   wordmark takes the gradient rather than an invented flat color. */
+.spectrum-text {
+  background: linear-gradient(100deg, #FF4D6D, #FF9F43, #FFD93D, #4ADE80, #38BDF8, #A78BFA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

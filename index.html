@@ -12,11 +12,11 @@
 </head>
 <body>
 
-<div style="background: oklch(99% 0.007 75); height: 100vh; width: 100vw; color: oklch(13% 0 0); position: relative; box-sizing: border-box; padding: clamp(20px, 3.5vw, 44px); display: flex; flex-direction: column; overflow: hidden;">
+<div class="app-shell" style="background: oklch(99% 0.007 75); height: 100vh; width: 100vw; color: oklch(13% 0 0); position: relative; box-sizing: border-box; padding: clamp(20px, 3.5vw, 44px); display: flex; flex-direction: column; overflow: hidden;">
 
   <div class="rainbow-bar"></div>
 
-  <nav style="display: flex; justify-content: space-between; align-items: flex-start; flex-shrink: 0;">
+  <nav class="site-nav" style="display: flex; justify-content: space-between; align-items: flex-start; flex-shrink: 0;">
     <div style="display: flex; flex-direction: column;">
       <h1 style="font-weight: 700; font-size: clamp(1.15rem, 2.3vw, 1.9rem); line-height: 1.08; letter-spacing: -0.01em; margin: 0; white-space: nowrap;">Henry &ldquo;Adrian&rdquo; Rozo</h1>
       <p style="font-weight: 500; font-size: clamp(0.66rem, 0.85vw, 0.74rem); margin: clamp(4px, 0.6vw, 6px) 0 0; line-height: 1.3;">Working at the intersection of product, policy, and strategy.</p>
@@ -29,7 +29,7 @@
   </nav>
 
   <div style="flex: 1; display: flex; align-items: center; min-height: 0; margin-top: clamp(8px, 1.5vw, 16px);">
-  <div style="width: 100%; display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto auto auto; gap: 0 clamp(24px, 4vw, 72px); align-items: start;">
+  <div class="home-grid" style="width: 100%; display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: auto auto auto; gap: 0 clamp(24px, 4vw, 72px); align-items: start;">
 
     <div style="grid-column: 1; grid-row: 1; text-align: left;">
       <div style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Projects</div>
@@ -38,20 +38,78 @@
       <div style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Experience &amp; Education</div>
     </div>
 
-    <div style="grid-column: 1; grid-row: 2; width: 363px; height: 1px; background: oklch(90% 0.01 75); margin-top: clamp(14px, 2vw, 22px)"></div>
-    <div style="grid-column: 2; grid-row: 2; justify-self: end; width: 234px; height: 1px; background: oklch(90% 0.01 75); margin-top: clamp(14px, 2vw, 22px)"></div>
+    <div class="col-rule" style="grid-column: 1; grid-row: 2; width: 100%; height: 1px; background: oklch(90% 0.01 75); margin-top: clamp(14px, 2vw, 22px)"></div>
+    <div class="col-rule" style="grid-column: 2; grid-row: 2; justify-self: end; width: 234px; height: 1px; background: oklch(90% 0.01 75); margin-top: clamp(14px, 2vw, 22px)"></div>
 
-    <div style="grid-column: 1; grid-row: 3; text-align: left; margin-top: clamp(14px, 2vw, 22px);">
-      <h2 style="font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.9rem); margin: 0; letter-spacing: -0.01em;"><span style="color: #5A3FE0;">X</span>Us<span style="color: #5A3FE0;">Currency</span></h2>
-      <p style="font-weight: 600; font-size: clamp(1rem, 1.4vw, 1.1rem); margin: 8px 0 0;">Simple, clean, and free conversions for UsAll.</p>
-      <p style="font-weight: 400; font-size: clamp(0.9rem, 1.1vw, 1rem); color: oklch(45% 0.01 75); margin: 10px 0 0; max-width: 540px; line-height: 1.55; width: 368px; height: 56px">A free Android currency converter and tracker designed for travelers, cross-border money needs, and everyday curiosity about currencies.</p>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: clamp(14px, 2vw, 22px);">
-        <a href="/xuscurrency" class="hover-85" style="display: inline-block; padding: 10px 20px; background: #5A3FE0; color: oklch(98% 0.014 75); font-weight: 600; font-size: 0.9rem; border-radius: 4px;">View Project</a>
-        <span style="display: inline-block; padding: 10px 20px; border: 1px solid oklch(80% 0.01 75); color: oklch(55% 0.01 75); font-weight: 600; font-size: 0.9rem; border-radius: 4px;">Play Store &mdash; Coming Soon</span>
+    <div class="project-list" style="grid-column: 1; grid-row: 3; text-align: left; margin-top: clamp(12px, 1.6vw, 18px);">
+
+      <div class="project-row">
+        <div class="project-main">
+          <h2 class="project-name"><span class="spectrum-text">X</span>Us<span class="spectrum-text">All</span></h2>
+          <p class="project-desc">The parent brand and design system behind everything below.</p>
+        </div>
+        <div class="project-links">
+          <a href="https://www.xusall.com" target="_blank" rel="noopener" class="project-live hover-55">xusall.com &#8599;</a>
+        </div>
       </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <h2 class="project-name"><span style="color: #FF3B30;">X</span>Us<span style="color: #FF3B30;">Pomodoro</span></h2>
+          <p class="project-desc">A focus timer that keeps everything in your browser.</p>
+        </div>
+        <div class="project-links">
+          <a href="/xuspomodoro" class="project-view">View Project</a>
+          <a href="https://pomodoro.xusall.com" target="_blank" rel="noopener" class="project-live hover-55">Live &#8599;</a>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <h2 class="project-name"><span style="color: #B3282D;">X</span>Us<span style="color: #2458B3;">Democracy</span></h2>
+          <p class="project-desc">Know who represents you, and when your next election is.</p>
+        </div>
+        <div class="project-links">
+          <a href="/xusdemocracy" class="project-view">View Project</a>
+          <a href="https://democracy.xusall.com" target="_blank" rel="noopener" class="project-live hover-55">Live &#8599;</a>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <h2 class="project-name"><span style="color: #7C4DFF;">X</span>Us<span style="color: #7C4DFF;">Notes</span></h2>
+          <p class="project-desc">A fast, private scratchpad that lives in your browser.</p>
+        </div>
+        <div class="project-links">
+          <a href="/xusnotes" class="project-view">View Project</a>
+          <a href="https://notes.xusall.com" target="_blank" rel="noopener" class="project-live hover-55">Live &#8599;</a>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <h2 class="project-name"><span style="color: #5A3FE0;">X</span>Us<span style="color: #5A3FE0;">Currency</span></h2>
+          <p class="project-desc">Simple, clean, and free conversions for UsAll. Android.</p>
+        </div>
+        <div class="project-links">
+          <a href="/xuscurrency" class="project-view">View Project</a>
+          <span class="project-status">Play Store soon</span>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <h2 class="project-name">XUsContacts</h2>
+          <p class="project-desc">Contact management that treats your address book as yours. iPhone.</p>
+        </div>
+        <div class="project-links">
+          <span class="project-status">In development</span>
+        </div>
+      </div>
+
     </div>
 
-    <div style="grid-column: 2; grid-row: 3; text-align: right; margin-top: clamp(14px, 2vw, 22px);">
+    <div class="experience-list" style="grid-column: 2; grid-row: 3; text-align: right; margin-top: clamp(14px, 2vw, 22px);">
       <div style="padding: clamp(6px, 1vw, 10px) 0;">
         <div style="font-weight: 700; font-size: clamp(0.9rem, 1.1vw, 1rem);">Bilt</div>
         <div style="font-weight: 400; font-size: clamp(0.82rem, 1vw, 0.92rem); color: oklch(45% 0.01 75); margin-top: 2px;">Customer Experience</div>

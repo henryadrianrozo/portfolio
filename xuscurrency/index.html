@@ -69,7 +69,7 @@
       <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
         <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Description</div>
         <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">A lightweight Android currency converter and tracker built for travelers, cross-border money decisions, and everyday currency curiosity.</p>
-        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">It&rsquo;s designed for travelers, people sending or receiving money across borders, and anyone casually interested in following currencies over time &mdash; intended for everyday guidance rather than professional trading or investment decisions.</p>
+        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">It&rsquo;s designed for travelers, people sending or receiving money across borders, and anyone casually interested in following currencies over time. It is intended for everyday guidance rather than professional trading or investment decisions.</p>
       </div>
       <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
         <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Core Features</div>
@@ -79,19 +79,13 @@
 
     <div style="grid-column: 1; grid-row: 3; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
       <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Built with AI</div>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency was independently conceived and developed through an AI-first workflow using Android Studio, Claude Code, Claude, and ChatGPT. Entering the project with no prior coding experience, AI served as both an implementation partner and learning tool throughout research, design, debugging, and testing &mdash; demonstrating how modern AI tools can lower technical barriers while still requiring ownership, judgment, and product thinking.</p>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency was independently conceived and developed through an AI-first workflow using Android Studio, Claude Code, Claude, and ChatGPT. Entering the project with no prior coding experience, AI served as both an implementation partner and learning tool throughout research, design, debugging, and testing, demonstrating how modern AI tools can lower technical barriers while still requiring ownership, judgment, and product thinking.</p>
     </div>
 
     <div style="grid-column: 2; grid-row: 3; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
       <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Data Source &amp; Philosophy</div>
       <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Exchange rates are provided through the free and open-source fawazahmed0/currency-api project and update daily, intended for practical everyday estimates rather than professional financial decisions.</p>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Quality software shouldn&rsquo;t require intrusive advertising or aggressive monetization &mdash; XUsCurrency emphasizes clarity, speed, and restraint, with a near-zero learning curve, while remaining completely free to use.</p>
-    </div>
-
-    <div style="grid-column: 2; grid-row: 4; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
-      <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(45% 0.01 75);">Privacy &amp; Business Model</div>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">XUsCurrency is donation-supported and free from intrusive advertisements or paywalls. The app does not sell user information and aims to minimize data collection wherever possible.</p>
-      <a href="/xuscurrency/privacy" class="hover-55" style="display: inline-block; margin-top: 10px; font-weight: 600; font-size: 0.85rem; border-bottom: 1px solid oklch(13% 0 0);">Privacy Policy &#8599;</a>
+      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Quality software shouldn&rsquo;t require intrusive advertising or aggressive monetization. XUsCurrency emphasizes clarity, speed, and restraint, with a near-zero learning curve, while remaining completely free to use.</p>
     </div>
 
   </div>
@@ -102,46 +96,10 @@
 
 <div id="lightbox" class="lightbox" hidden>
   <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
-  <img id="lightbox-img" src="" alt="">
+  <img id="lightbox-img" alt="">
 </div>
 
-<script>
-(function () {
-  var lightbox = document.getElementById('lightbox');
-  var lightboxImg = document.getElementById('lightbox-img');
-  var closeBtn = document.getElementById('lightbox-close');
-
-  function openLightbox(src, alt) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt;
-    lightbox.hidden = false;
-    document.body.style.overflow = 'hidden';
-    closeBtn.focus();
-  }
-
-  function closeLightbox() {
-    lightbox.hidden = true;
-    lightboxImg.src = '';
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.shot').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      openLightbox(btn.getAttribute('data-full'), btn.querySelector('img').alt);
-    });
-  });
-
-  lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  closeBtn.addEventListener('click', closeLightbox);
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
-  });
-})();
-</script>
+<script src="/lightbox.js"></script>
 
 </body>
 </html>
