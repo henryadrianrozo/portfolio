@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Henry Adrian Rozo">
+  <!-- A miniature of the site itself: the near-black ink on the warm cream
+       ground, with the rainbow bar that runs across the top of every page.
+       Colors match styles.css; keep them in sync if the palette moves. -->
+  <defs>
+    <clipPath id="r">
+      <rect width="64" height="64" rx="13"/>
+    </clipPath>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff3b30"/>
+      <stop offset="17%" stop-color="#ff9500"/>
+      <stop offset="33%" stop-color="#ffcc00"/>
+      <stop offset="50%" stop-color="#34c759"/>
+      <stop offset="67%" stop-color="#0a84ff"/>
+      <stop offset="84%" stop-color="#5e5ce6"/>
+      <stop offset="100%" stop-color="#af52de"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#r)">
+    <rect width="64" height="64" fill="#141414"/>
+    <rect width="64" height="6" fill="url(#spectrum)"/>
+  </g>
+
+  <!-- The A is drawn rather than set in type, so it renders identically
+       wherever the icon is used and does not depend on a font being present. -->
+  <path d="M 18 50 L 32 19 L 46 50 M 24 40 L 40 40"
+        fill="none" stroke="#FDFBF7" stroke-width="6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
