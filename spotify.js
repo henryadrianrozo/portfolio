@@ -15,7 +15,11 @@
   // and the ID is the part between /playlist/ and the ?  ->  37i9dQZF1DXcBWIGoYBM5M
   // The playlist has to be public or the embed renders an error.
   // While this is empty the button stays hidden, so nothing ships broken.
-  var PLAYLIST_ID = '';
+  //
+  // Currently: "Eclectic Fusions V4".
+  // Note the ?si= parameter on a Spotify share link is a share-session
+  // identifier tied to whoever copied it. It is deliberately not carried here.
+  var PLAYLIST_ID = '2P2YGCXZq53x0SAi2QyVAY';
   // ---------------------------------------------------------------------
 
   var toggle = document.getElementById('music-toggle');
@@ -43,7 +47,13 @@
     frame.height = '152';
     frame.frameBorder = '0';
     frame.loading = 'lazy';
-    frame.allow = 'clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    // autoplay is in the permission list because the iframe is only ever
+    // created from a real click on the play button, so starting immediately is
+    // what someone pressing play expects. Browsers may still require a second
+    // press inside the player; that is their policy, not something to fight.
+    frame.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    frame.setAttribute('allowfullscreen', '');
+    frame.style.borderRadius = '12px';
     frame.title = 'Spotify playlist';
     panel.insertBefore(frame, panel.firstChild);
   }
