@@ -27,8 +27,10 @@
   if (!toggle || !panel) return;
 
   if (!PLAYLIST_ID) {
-    toggle.remove();
-    panel.remove();
+    // Take the wrapper with them, so no empty flex item is left in the nav.
+    var wrap = toggle.closest('.music-wrap');
+    if (wrap) wrap.remove();
+    else { toggle.remove(); panel.remove(); }
     return;
   }
 

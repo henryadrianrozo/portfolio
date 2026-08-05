@@ -313,11 +313,28 @@ a { text-decoration: none; color: inherit; }
 
 /* Absolutely positioned so opening it cannot push the single-screen layout
    around. Anchored to the nav, which is position: relative for this reason. */
+/* Wraps the button and its panel so the panel anchors to the button rather
+   than to the whole nav. Also puts the panel next to the button in the DOM, so
+   tab order runs button, panel, links. */
+.music-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* right: 0 aligns the panel's right edge with the button's and lets it extend
+   leftward, which keeps a 340px panel on screen while the button sits near the
+   right of a single-row nav. Below the wrap point the anchor flips; see the
+   media query at the end of this file. */
 .music-panel {
   position: absolute;
   top: calc(100% + 12px);
   right: 0;
   z-index: 60;
+  /* border-box, or the 12px padding and 1px border push the real width to
+     366px and the panel hangs off the edge on narrow screens. This sheet has
+     no global box-sizing reset, so it has to be set here. */
+  box-sizing: border-box;
   width: min(340px, calc(100vw - 40px));
   padding: 12px 12px 4px;
   background: oklch(99% 0.007 75);
@@ -401,4 +418,14 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: oklch(45% 0.01 75);
+}
+
+/* The nav is one row down to 560px and wraps at 550px, measured rather than
+   assumed. Once the links move to their own row they sit at the left, so a
+   right-anchored panel would hang off the left edge of the screen. */
+@media (max-width: 555px) {
+  .music-panel {
+    right: auto;
+    left: 0;
+  }
 }

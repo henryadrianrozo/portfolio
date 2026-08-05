@@ -32,33 +32,39 @@
 
   <div class="rainbow-bar"></div>
 
-  <nav class="site-nav" style="display: flex; justify-content: space-between; align-items: flex-start; flex-shrink: 0; position: relative;">
+  <nav class="site-nav" style="display: flex; justify-content: space-between; align-items: flex-start; flex-shrink: 0;">
     <div style="display: flex; flex-direction: column;">
       <h1 style="font-weight: 700; font-size: clamp(1.15rem, 2.3vw, 1.9rem); line-height: 1.08; letter-spacing: -0.01em; margin: 0; white-space: nowrap;">Henry &ldquo;Adrian&rdquo; Rozo</h1>
       <p style="font-weight: 500; font-size: clamp(0.66rem, 0.85vw, 0.74rem); margin: clamp(4px, 0.6vw, 6px) 0 0; line-height: 1.3;">Working at the intersection of product, policy, and strategy.</p>
       <p style="font-weight: 400; font-size: clamp(0.62rem, 0.78vw, 0.68rem); color: oklch(45% 0.01 75); margin: clamp(4px, 0.6vw, 6px) 0 0; line-height: 1.45; max-width: 292px">Interested in building tools, systems, and experiences that create meaningful improvements in everyday life and society.</p>
     </div>
     <div class="nav-links" style="display: flex; align-items: center; gap: 20px; padding-top: 0.3em;">
+
+      <!-- The music easter egg. The button and the panel live in one wrapper so
+           the panel can anchor to the button rather than to the nav, and so tab
+           order runs button, panel, links. spotify.js removes the whole thing if
+           no playlist ID is set, so nothing half-built ever reaches the page. -->
+      <div class="music-wrap">
+        <button type="button" id="music-toggle" class="music-toggle" aria-expanded="false"
+                aria-controls="music-panel" aria-label="Play music while you browse" title="Music">
+          <svg width="11" height="13" viewBox="0 0 11 13" aria-hidden="true">
+            <path d="M1 1.2 L10 6.5 L1 11.8 Z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <div id="music-panel" class="music-panel" hidden>
+          <button type="button" id="music-close" class="music-close" aria-label="Close player">&times;</button>
+          <p class="music-note">
+            Some music for you while you browse my portfolio projects. Spotify tracks plays, and full
+            songs need a Spotify login, so <a id="music-open" href="https://open.spotify.com" target="_blank" rel="noopener">open it in Spotify</a>
+            if you want it to follow you around the site. Or open project links in a new tab to keep
+            it playing here.
+          </p>
+        </div>
+      </div>
+
       <a href="https://www.linkedin.com/in/henryadrianrozo/" target="_blank" rel="noopener" class="hover-55" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;">LinkedIn &#8599;</a>
       <a href="mailto:henryadrianrozo@gmail.com" class="hover-55" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;">Email &#8599;</a>
-
-      <!-- The music easter egg. spotify.js removes both of these outright if no
-           playlist ID is set, so nothing half-built ever reaches the page. -->
-      <button type="button" id="music-toggle" class="music-toggle" aria-expanded="false"
-              aria-controls="music-panel" aria-label="Play music while you browse" title="Music">
-        <svg width="11" height="13" viewBox="0 0 11 13" aria-hidden="true">
-          <path d="M1 1.2 L10 6.5 L1 11.8 Z" fill="currentColor"/>
-        </svg>
-      </button>
-    </div>
-
-    <div id="music-panel" class="music-panel" hidden>
-      <button type="button" id="music-close" class="music-close" aria-label="Close player">&times;</button>
-      <p class="music-note">
-        Some of what I listen to while building these. Spotify tracks plays, and full songs need a
-        Spotify login, so <a id="music-open" href="https://open.spotify.com" target="_blank" rel="noopener">open it in Spotify</a>
-        if you want it to follow you around the site.
-      </p>
     </div>
   </nav>
 
