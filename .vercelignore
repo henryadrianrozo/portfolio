@@ -1,2 +1,5 @@
 source-export
 .DS_Store
+
+# staging folder for asset drops, never published
+XUSCURRENCY_PORT_UPDATE

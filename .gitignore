@@ -3,3 +3,6 @@
 
 # macOS folder metadata
 .DS_Store
+
+# staging folder for asset drops
+XUSCURRENCY_PORT_UPDATE/
