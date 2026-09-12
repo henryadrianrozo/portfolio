@@ -11,9 +11,11 @@ Static site, no build step: `index.html` plus `styles.css`, `lightbox.js` and
 `.env.local` holds the Spotify credentials and is untracked. Do not commit it.
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-12 · `1e9fd3f`  
-**State:** Live. Case-study site for the XUs apps.  
-**Next:** XUsContacts was pulled from the homepage while in development; put it back once it ships. XUsMemories and XUsCalendar have no case study yet.
+**Updated:** 2026-09-12 · `ad80d5f`  
+**State:** Live at adrianrozo.com. The case-study site for the XUs apps.  
+**Last shipped:** XUsContacts pulled from the homepage while it is still in development, after matching XUsCurrency's wordmark to its real app icon and wiring up its Play Store link.  
+**Missing:** Case studies for XUsCalendar, XUsContacts and XUsPhotos. Five exist: XUsCurrency, XUsDemocracy, XUsNotes, XUsPomodoro, XUsMemories.  
+**Next:** Add the three missing case studies, and put XUsContacts back on the homepage once it ships.
 <!-- STATUS:END -->
 
 
