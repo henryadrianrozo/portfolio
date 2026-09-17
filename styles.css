@@ -180,21 +180,25 @@ a { text-decoration: none; color: inherit; }
   white-space: nowrap;
 }
 
+/* Secondary: the case study is there for anyone curious, but the row's one
+   strong link is Visit. Underline only on hover so each row has a single
+   underlined link at rest. */
 .project-view {
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(0.72rem, 0.88vw, 0.8rem);
-  color: oklch(13% 0 0);
-  border-bottom: 1px solid oklch(13% 0 0);
+  color: oklch(45% 0.01 75);
+  border-bottom: 1px solid transparent;
   padding-bottom: 1px;
-  transition: opacity 0.18s ease;
+  transition: border-color 0.18s ease, color 0.18s ease;
 }
 
-.project-view:hover {
-  opacity: 0.55;
+.project-view:hover,
+.project-view:focus-visible {
+  color: oklch(30% 0.01 75);
+  border-bottom-color: currentColor;
 }
 
-/* Visit and store links: the same bold underline as View Project, one step
-   heavier, so the way out to the real thing is the strongest link in a row. */
+/* Visit: the strongest link in every row, the same on each project. */
 .project-live {
   font-weight: 700;
   font-size: clamp(0.72rem, 0.88vw, 0.8rem);
