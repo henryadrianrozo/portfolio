@@ -5,17 +5,23 @@ Live at **https://www.adrianrozo.com**, hosted on Vercel (project `portfolio`),
 deployed from GitHub `henryadrianrozo/portfolio` on push to `main`.
 
 Static site, no build step: `index.html` plus `styles.css`, `lightbox.js` and
-`spotify.js`. One case-study folder per app (`xuscurrency/`, `xusdemocracy/`,
-`xusnotes/`, `xuspomodoro/`, `xusmemories/`).
+`spotify.js`. One case-study folder per app (`xusmemories/`, `xuscurrency/`,
+`xuscalendar/`, `xuspomodoro/`, `xusnotes/`, `xusdemocracy/`). They all share
+one template: header and screenshots on the left, an overview, six highlights
+and a one-line "built with" note on the right, sized to fit one screen. The
+styles live under "case study template" in `styles.css`.
+
+`xusmemories/XUsMemories_Handoff/` is the app's original design spec, kept
+locally and gitignored. It is not site content.
 
 `.env.local` holds the Spotify credentials and is untracked. Do not commit it.
 
 <!-- STATUS:BEGIN -->
 **Updated:** 2026-09-12 · `ad80d5f`  
 **State:** Live at adrianrozo.com. The case-study site for the XUs apps.  
-**Last shipped:** XUsContacts pulled from the homepage while it is still in development, after matching XUsCurrency's wordmark to its real app icon and wiring up its Play Store link.  
-**Missing:** Case studies for XUsCalendar, XUsContacts and XUsPhotos. Five exist: XUsCurrency, XUsDemocracy, XUsNotes, XUsPomodoro, XUsMemories.  
-**Next:** Add the three missing case studies, and put XUsContacts back on the homepage once it ships.
+**Last shipped:** Portfolio refresh: XUsMemories (first) and XUsCalendar added with case studies, every case study cut to one screen (overview plus six highlights), fresh screenshots of all four web apps, "Visit" links in bold underline, LinkedIn moved under Experience & Education.  
+**Missing:** Case studies for XUsContacts and XUsPhotos, which stay off the site until they ship.  
+**Next:** Add XUsContacts to the homepage and give it a case study once it is approved on the App Store.
 <!-- STATUS:END -->
 
 

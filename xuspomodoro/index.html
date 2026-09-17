@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>XUsPomodoro &mdash; Henry &ldquo;Adrian&rdquo; Rozo</title>
-<meta name="description" content="A simple, robust Pomodoro and quick timer that lives entirely in your browser. Free, no account, works offline.">
+<title>XUsPomodoro | Henry &ldquo;Adrian&rdquo; Rozo</title>
+<meta name="description" content="A lightweight focus timer that helps you work in structured blocks. Free, no account, works offline.">
 <link rel="canonical" href="https://www.adrianrozo.com/xuspomodoro">
 <meta name="theme-color" content="#FDFBF7">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.adrianrozo.com/xuspomodoro">
-<meta property="og:title" content="XUsPomodoro — Henry “Adrian” Rozo">
-<meta property="og:description" content="A simple, robust Pomodoro and quick timer that lives entirely in your browser. Free, no account, works offline.">
+<meta property="og:title" content="XUsPomodoro | Henry “Adrian” Rozo">
+<meta property="og:description" content="A lightweight focus timer that helps you work in structured blocks. Free, no account, works offline.">
 <meta property="og:image" content="https://www.adrianrozo.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="XUsPomodoro — Henry “Adrian” Rozo">
-<meta name="twitter:description" content="A simple, robust Pomodoro and quick timer that lives entirely in your browser. Free, no account, works offline.">
+<meta name="twitter:title" content="XUsPomodoro | Henry “Adrian” Rozo">
+<meta name="twitter:description" content="A lightweight focus timer that helps you work in structured blocks. Free, no account, works offline.">
 <meta name="twitter:image" content="https://www.adrianrozo.com/og.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -25,76 +25,64 @@
 </head>
 <body>
 
-<div style="background: oklch(99% 0.007 75); min-height: 100vh; color: oklch(13% 0 0); position: relative; box-sizing: border-box; padding: clamp(20px, 3.5vw, 44px);">
+<div style="background: oklch(99% 0.007 75); min-height: 100vh; color: oklch(13% 0 0); position: relative; box-sizing: border-box; padding: clamp(20px, 3.5vw, 44px); --case-accent: #FF3B30;">
 
   <div class="rainbow-bar"></div>
 
   <nav style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <a href="/" class="hover-55" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); white-space: nowrap;">Henry &ldquo;Adrian&rdquo; Rozo</a>
-    <div style="display: flex; align-items: center; gap: 20px; padding-top: 0.3em;">
-      <a href="https://www.linkedin.com/in/henryadrianrozo/" target="_blank" rel="noopener" class="hover-55" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;">LinkedIn &#8599;</a>
-      <a href="mailto:henryadrianrozo@gmail.com" class="hover-55" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;">Email &#8599;</a>
-    </div>
+    <a href="/" class="hover-55" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); white-space: nowrap;">&larr; Henry &ldquo;Adrian&rdquo; Rozo</a>
+    <a href="mailto:henryadrianrozo@gmail.com" class="hover-55" style="font-weight: 500; font-size: 0.95rem; color: oklch(13% 0 0); border-bottom: 1px solid oklch(13% 0 0); white-space: nowrap;">Email &#8599;</a>
   </nav>
 
-  <div style="margin-top: clamp(20px, 3vw, 36px); display: grid; grid-template-columns: 1fr 1fr;">
+  <main class="case-grid">
 
-    <div style="grid-column: 1; grid-row: 1; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
-      <h1 style="font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: 0; letter-spacing: -0.01em; font-weight: 700;"><span style="color: #1E9E4A;">X</span><span style="color: #26232F;">Us</span><span style="color: #FF3B30;">Pomodoro</span></h1>
-      <p style="font-weight: 600; font-size: 0.85rem; margin: 10px 0 0;">A focus timer that keeps everything in your browser.</p>
-      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
-        <div style="display: inline-block; padding: 5px 11px; border: 1px solid oklch(70% 0.01 75); border-radius: 999px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: oklch(40% 0.01 75);">Live</div>
-        <a href="https://pomodoro.xusall.com" target="_blank" rel="noopener" class="hover-85" style="display: inline-block; padding: 7px 13px; background: #FF3B30; color: oklch(98% 0.014 75); font-weight: 600; font-size: 0.72rem; border-radius: 4px;">pomodoro.xusall.com &#8599;</a>
+    <div class="case-side">
+      <div class="case-title">
+        <h1><span style="color: #1E9E4A;">X</span><span style="color: #26232F;">Us</span><span style="color: #FF3B30;">Pomodoro</span></h1>
       </div>
-    </div>
-
-    <div style="grid-column: 2; grid-row: 1; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
-      <h2 class="case-label">The Problem</h2>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Most Pomodoro apps solve a focus problem by adding things to keep track of: accounts, streaks, daily goals, badges. The tool meant to protect your attention ends up competing for it.</p>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">There is also a quieter, more technical failure. Most browser timers count down by decrementing a counter on an interval. Browsers throttle background tabs and laptops go to sleep, so a 25 minute session can quietly finish at 31 minutes and the user never learns the number they were shown was wrong.</p>
-    </div>
-
-    <div style="grid-column: 1; grid-row: 2; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
-      <h2 class="case-label">Screenshots</h2>
-      <div class="shots-grid" style="margin-top: 12px;">
-        <button type="button" class="shot" data-full="/assets/screenshots/pomodoro-light-full.jpg" aria-label="View full-resolution screenshot: Timer — Light">
-          <img class="shot-img" src="/assets/screenshots/pomodoro-light-thumb.jpg" alt="XUsPomodoro focus timer in light mode" width="900" height="562" loading="lazy" decoding="async">
-          <span class="shot-caption">Timer &mdash; Light</span>
-        </button>
-        <button type="button" class="shot" data-full="/assets/screenshots/pomodoro-dark-full.jpg" aria-label="View full-resolution screenshot: Timer with history — Dark">
-          <img class="shot-img" src="/assets/screenshots/pomodoro-dark-thumb.jpg" alt="XUsPomodoro focus timer with a day of session dots in dark mode" width="900" height="562" loading="lazy" decoding="async">
-          <span class="shot-caption">History &mdash; Dark</span>
-        </button>
+      <p class="case-tagline">A focus timer that keeps everything in your browser.</p>
+      <div class="case-actions">
+        <span class="case-pill">Live</span>
+        <a href="https://pomodoro.xusall.com" target="_blank" rel="noopener" class="case-visit">Visit &#8599;</a>
       </div>
+
+      <section class="case-shots">
+        <h2 class="case-label">Screenshots</h2>
+        <div class="shots-grid">
+          <button type="button" class="shot" data-full="/assets/screenshots/pomodoro-light-full.jpg" aria-label="View full-resolution screenshot: Timer, light">
+            <img class="shot-img" src="/assets/screenshots/pomodoro-light-thumb.jpg" alt="XUsPomodoro focus timer in light mode, labeled Portfolio refresh, with 5 and 15 minute breaks and three quick timers" width="900" height="562" loading="lazy" decoding="async">
+            <span class="shot-caption">Timer, light</span>
+          </button>
+          <button type="button" class="shot" data-full="/assets/screenshots/pomodoro-dark-full.jpg" aria-label="View full-resolution screenshot: Timer, dark">
+            <img class="shot-img" src="/assets/screenshots/pomodoro-dark-thumb.jpg" alt="XUsPomodoro focus timer in dark mode, labeled Portfolio refresh, with the three quick timers below" width="900" height="562" loading="lazy" decoding="async">
+            <span class="shot-caption">Timer, dark</span>
+          </button>
+        </div>
+      </section>
     </div>
 
-    <div style="grid-column: 2; grid-row: 2; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px); height: 100%; box-sizing: border-box; display: grid; grid-template-rows: 1fr 1fr; gap: 28px;">
-      <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
-        <h2 class="case-label">Description</h2>
-        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">One focus timer, two breaks, and three quick timers for everything that is not a Pomodoro. Name what you are working on before you start and the session lands in a history that stays on your machine.</p>
-        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Breaks never start on their own. Completed sessions are tallied as colored dots rather than scores, and the arriving dot is the only confirmation the app gives you.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; max-width: 420px;">
-        <h2 class="case-label">Core Features</h2>
-        <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Three permanent timer tiers with configurable durations, an optional label and chip per session so many sessions can roll into one long-term total, a history sidebar with weekly stats and per-day breakdowns, and JSON and CSV export. Light, dark, and system themes, keyboard shortcuts, a tab-title countdown, a favicon that shows which timer is running, and an installable app that works with no network at all.</p>
-      </div>
+    <div class="case-about">
+      <section>
+        <h2 class="case-label">Overview</h2>
+        <p class="case-overview">XUsPomodoro is a lightweight focus timer that helps you work in structured blocks. No account, no streaks, and nothing competing for the attention it is meant to protect.</p>
+      </section>
+
+      <section class="case-highlights">
+        <h2 class="case-label">Highlights</h2>
+        <ul class="case-bullets">
+          <li><strong>One timer, two breaks.</strong> Breaks never start on their own.</li>
+          <li><strong>Three quick timers.</strong> For everything that is not a Pomodoro.</li>
+          <li><strong>Session history.</strong> Label sessions and see weekly stats in your history.</li>
+          <li><strong>Accurate.</strong> It counts to an end time, so a sleeping laptop cannot stretch a session.</li>
+          <li><strong>Works offline.</strong> Install it as an app. Everything stays in your browser.</li>
+          <li><strong>Left out on purpose.</strong> No auto-start, streaks, daily goals, or badges.</li>
+        </ul>
+      </section>
+
+      <p class="case-built">Next.js, designed in Claude Design and built with Claude Code.</p>
     </div>
 
-    <div style="grid-column: 1; grid-row: 3; padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px) 0;">
-      <h2 class="case-label">Built with AI</h2>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">Designed in Claude Design and built with Claude Code, from a written design handoff into a working Next.js application. The interesting part of that workflow is not the speed, it is where judgment still has to live: deciding that the timer had to be timestamp-based, that breaks should never auto-start, and that a feature needing a sentence of on-screen explanation does not belong.</p>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Every visual decision was checked against the running app rather than assumed, including measuring color contrast from rendered pixels to decide whether a number should be white or black on its circle.</p>
-    </div>
-
-    <div style="grid-column: 2; grid-row: 3; padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(20px, 3vw, 32px);">
-      <h2 class="case-label">Approach &amp; Philosophy</h2>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 10px 0 0;">The timer stores the moment it should end rather than counting down. Every repaint asks the clock how much time is left, so a throttled tab, a closed laptop, or a browser crash cannot stretch or lose a session. A timer still running when you return is restored, and one that finished while you were away is recorded when you come back.</p>
-      <p style="font-size: 0.85rem; color: oklch(35% 0.01 75); line-height: 1.55; margin: 8px 0 0;">Everything lives in the browser under a single storage key, with no server and no account to lose access to. Auto-start, streaks, daily targets, and focus-mode blocking were all considered and declined. They are not missing features, they are the product decision.</p>
-    </div>
-
-  </div>
-
-  <div style="padding-bottom: clamp(28px, 4vw, 48px);"></div>
+  </main>
 
 </div>
 

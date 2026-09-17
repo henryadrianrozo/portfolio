@@ -126,7 +126,7 @@ a { text-decoration: none; color: inherit; }
 .lightbox-close:hover { opacity: 0.85; }
 
 /* ---------- homepage project list ---------- */
-/* Six projects in the space one used to take, so the page can still be a
+/* Seven projects in the space one used to take, so the page can still be a
    single screen with no scrolling. Each row is name, one line, and links. */
 
 .project-list {
@@ -193,10 +193,15 @@ a { text-decoration: none; color: inherit; }
   opacity: 0.55;
 }
 
+/* Visit and store links: the same bold underline as View Project, one step
+   heavier, so the way out to the real thing is the strongest link in a row. */
 .project-live {
-  font-weight: 500;
+  font-weight: 700;
   font-size: clamp(0.72rem, 0.88vw, 0.8rem);
-  color: oklch(45% 0.01 75);
+  color: oklch(13% 0 0);
+  border-bottom: 1px solid oklch(13% 0 0);
+  padding-bottom: 1px;
+  transition: opacity 0.18s ease;
 }
 
 /* Not a link: there is nowhere to send anyone yet. */
@@ -428,4 +433,163 @@ a { text-decoration: none; color: inherit; }
     right: auto;
     left: 0;
   }
+}
+
+/* ---------- case study template ---------- */
+/* One screen per project. The left column is who it is and what it looks
+   like, the right column is what it does. The right column is meant to end
+   near the bottom of the screenshots, so the copy is kept to an overview and
+   six short highlights rather than essays. */
+
+.case-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 clamp(28px, 5vw, 72px);
+  align-items: start;
+  margin-top: clamp(24px, 3.5vw, 44px);
+  padding-bottom: clamp(28px, 4vw, 48px);
+}
+
+.case-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.case-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px oklch(90% 0.01 75);
+}
+
+.case-title h1 {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  margin: 0;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.case-tagline {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 10px 0 0;
+}
+
+.case-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.case-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid #1E9E4A;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1E9E4A;
+}
+
+/* The one call to action on the page, styled like the homepage's links
+   rather than a colored button. */
+.case-visit {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: oklch(13% 0 0);
+  border-bottom: 1.5px solid oklch(13% 0 0);
+  padding-bottom: 1px;
+  transition: opacity 0.18s ease;
+}
+
+.case-visit:hover { opacity: 0.55; }
+
+.case-shots {
+  margin-top: clamp(24px, 3vw, 34px);
+}
+
+.case-shots .shots-grid {
+  margin-top: 12px;
+}
+
+.case-overview {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: oklch(20% 0.01 75);
+  margin: 10px 0 0;
+  max-width: 34em;
+}
+
+.case-highlights {
+  margin-top: clamp(20px, 2.6vw, 28px);
+}
+
+.case-bullets {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  max-width: 34em;
+}
+
+.case-bullets li {
+  position: relative;
+  padding: 9px 0 9px 18px;
+  border-bottom: 1px solid oklch(93% 0.01 75);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: oklch(40% 0.01 75);
+}
+
+.case-bullets li:last-child { border-bottom: 0; }
+
+.case-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: calc(9px + 0.45em);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--case-accent, oklch(45% 0.01 75));
+}
+
+.case-bullets strong {
+  font-weight: 700;
+  color: oklch(13% 0 0);
+}
+
+.case-built {
+  margin: clamp(16px, 2vw, 22px) 0 0;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: oklch(50% 0.01 75);
+  max-width: 46em;
+}
+
+@media (max-width: 800px) {
+  .case-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .case-about {
+    margin-top: 36px;
+  }
+}
+
+/* LinkedIn sits under the résumé it backs up rather than in the nav. */
+.experience-more {
+  padding-top: clamp(8px, 1.2vw, 14px);
+}
+
+/* Phone screenshots are tall and narrow, so give them more height here than
+   the shared 200px cap; wide web screenshots are limited by width anyway. */
+.case-shots .shot-img {
+  max-height: 300px;
 }
