@@ -25,4 +25,14 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.adrianrozo.com/xusmemories</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.adrianrozo.com/xuscalendar</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
