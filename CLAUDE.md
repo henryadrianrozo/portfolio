@@ -17,9 +17,9 @@ locally and gitignored. It is not site content.
 `.env.local` holds the Spotify credentials and is untracked. Do not commit it.
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-16 · `35fbf1d`  
+**Updated:** 2026-09-18 · `0e7b7c5`  
 **State:** Live at adrianrozo.com. The case-study site for the XUs apps.  
-**Last shipped:** Portfolio refresh: XUsMemories (first) and XUsCalendar added with case studies, every case study cut to one screen (overview plus six highlights), fresh screenshots of all four web apps, "Visit" links in bold underline, LinkedIn moved under Experience & Education.  
+**Last shipped:** XUsPomodoro case study no longer says "Install it as an app"; it now says it runs in the browser with nothing to download. xusall.com already described it as a web app and needed no change.  
 **Missing:** Case studies for XUsContacts and XUsPhotos, which stay off the site until they ship.  
 **Next:** Add XUsContacts to the homepage and give it a case study once it is approved on the App Store.
 <!-- STATUS:END -->
